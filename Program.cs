@@ -1,22 +1,12 @@
 ﻿using System;
-class InAndOutModifier
+class TreyParseMethod
 {
     public static void Main(string[] args)
     {
-        int a = 44;
-        InArrayExample(a);
-        Console.WriteLine(a);
-
-       // int a;
-        OutArgExample(out a);
-        Console.WriteLine(a);
-    }
-    static void InArrayExample(in int number)
-    {
-        //int number = 10;it give a error it is ReadOnly veriable
-    }
-    static void OutArgExample(out int number)
-    {
-        number = 10;
+        bool res1;
+        int a;
+        string str = "12";
+        res1 = int.TryParse(str, out a);
+        Console.WriteLine("String is a numeric representation :" + res1);
     }
 }
